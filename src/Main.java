@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class Solve {
+public class Main {
     public static void main(String[] args) {
         MyLinkedList<String> list = new MyLinkedList<>();
         list.add("string1");
@@ -15,6 +13,5 @@ public class Solve {
         list.add(0, "string1");
         System.out.println(list.get(0));
 
-        list.
     }
 }
