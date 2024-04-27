@@ -80,13 +80,6 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
 
-    // 1 - > 2 - > 3 - > 4 - > 5 - > null
-
-    // int index = 4;
-    // T item = 'new';
-
-    // 1 -> 2 -> 3 -> 4 -> 'new' -> 5 -> null
-
     @Override
     public void add(int index, T item) {
         checkElementIndex(index);
@@ -167,13 +160,6 @@ public class MyLinkedList<T> implements MyList<T> {
 
     }
 
-
-
-
-    // to remove the element with the index 3 here we have to iterate the 'current' before the index
-    // 1 -> 2 -> 3 ( have to be removed ) -> 4 -> 5 -> null
-    // current.next = current.next.next; || 2 refers to the element after next which is 4 || 2 - > 4
-    // 1 -> 2 -> 4 -> 5 -> null
     @Override
     public void remove(int index){
         checkElementIndex(index);
@@ -193,22 +179,12 @@ public class MyLinkedList<T> implements MyList<T> {
         size--;
     }
 
-    // 1 -> 2 -> 3 -> 4 -> 5 -> null
-
-    // now by referring the head to the next element we get rid of the first element
-
-    // 2 -> 3 -> 4 -> 5 -> null
     @Override
     public void removeFirst(){
         isEmpty();
         head=head.next;
     }
 
-
-    // 1 -> 2 -> 3 -> 4 -> null
-    // here the last element is four and to delete this element here first have to be checked is everything okay with the size of the linked list
-    // if yes it continues and takes the next step which is the current iterator goes before the last element and stops here
-    // so in the given example it stops on the element 3 and turns the next element to null  <4 == null>, and the tail is now current element which is 3
     @Override
     public void removeLast(){
         isEmpty();

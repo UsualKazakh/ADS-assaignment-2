@@ -81,19 +81,6 @@ public class MyArrayList<T> implements MyList<T> {
         }
     }
 
-
-    // 1 2 3 4 5 6 ... ?null?
-
-    // 1 2 3 4 5 ... 6 || 1 2 3 4 ... 5 6 || 1 2 3 ... 4 5 6 || 1 2 ... 3 4 5 6
-
-    // 1 2 ... 3 4 5 6  <<-- moved to the right by checking for first of all is there exists
-    // any memory space, and then shift them to the right after ensuring that everything is right
-
-    // 1 2 6 3 4 5 6
-
-    // at the end at index 3 there adds the number 6
-
-    // there have to be inserted number 6 on index 3
     @Override
 
     public void add(int index, T item){
@@ -105,16 +92,6 @@ public class MyArrayList<T> implements MyList<T> {
         array[index] = item;
         size++;
     }
-
-    // 1 2 3 4 5 6 ... ?null?
-
-    // there have to be deleted the element with index 3
-
-    // 1 2 4 4 5 6 || 1 2 4 5 5 6 || 1 2 4 5 6
-
-    // 1 2 4 5 6  <<-- commencing from the given index element goes to the right side until the size of the array
-    // the key element is array[i] = array[i+1]
-    // so by using this method the current index stores next element, and at the end it turns into null to prevent the memory leakage
     @Override
     public void remove(int index){
         throwException(index);
@@ -124,10 +101,6 @@ public class MyArrayList<T> implements MyList<T> {
         array[size - 1] = null; // prevents the memory leak
         size--;
     }
-
-    // 1 2 3 4 5 6 ... ?null?
-    // 2 2 3 4 5 6 || 2 3 3 4 5 6 || 2 3 4 4 5 6 || 2 3 4 5 5 6 || 2 3 4 5 6 ... || 2 3 4 5 6 null ...
-    // the function removeFirst works as shown above by overriding the first element with the next one and at the end converting the empty place to null
 
     @Override
     public void removeFirst() {
@@ -284,10 +257,4 @@ public class MyArrayList<T> implements MyList<T> {
         }
         return -1;  // return -1 if no match is found
     }
-
-
-
-
-
-
 }
