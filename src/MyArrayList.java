@@ -3,7 +3,7 @@ import java.util.NoSuchElementException;
 
 public class MyArrayList<T> implements MyList<T> {
     private int size = 0;
-    private static final int DEFAULT_CAPACITY = 10;
+    private static final int DEFAULT_CAPACITY = 5;
     private T[] array;
 
 
