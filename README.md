@@ -1,3 +1,14 @@
-This project includes custom implementations of common data structures:
+This project encompasses custom implementations of common data structures:
 
-MyArrayList: Dynamic array-based list. MyLinkedList: Doubly linked list. MyStack: Stack based on MyArrayList. MyQueue: Queue based on MyLinkedList. MyMinHeap: Min-heap based on MyArrayList. Each structure provides basic operations like adding, removing, peeking, and sizing.
+MyArrayList: A dynamic array-based list.
+MyLinkedList: A doubly linked list.
+MyStack: A stack based on MyArrayList.
+MyQueue: A queue based on MyLinkedList.
+MyMinHeap: A min-heap based on MyArrayList.
+Each structure offers fundamental operations like addition, removal, peeking, and sizing.
+
+
+
+
+
+
